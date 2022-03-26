@@ -3,10 +3,16 @@ import getRandomNum from '../getRandom.js';
 const rule = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (num1, num2) => {
-  if (num2 === 0) {
-    return num1;
+  let t = 0;
+  let a = num1;
+  let b = num2;
+  while (b !== 0) {
+    t = b;
+    b = a % b;
+    a = t;
   }
-  return getGCD(num2, num1 % num2);
+  const result = t;
+  return result;
 };
 
 const getMaximumDivisor = () => {
