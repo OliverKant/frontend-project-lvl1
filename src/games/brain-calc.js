@@ -23,8 +23,10 @@ const calc = (num1, num2, operator) => {
 const getResultExpression = () => {
   const num1 = getRandomNum(1, 10);
   const num2 = getRandomNum(1, 10);
+
   const operator = operators[getRandomNum(0, 2)];
   console.log(`Question: ${num1} ${operator} ${num2}`);
+
   const correctAnswer = calc(num1, num2, operator);
   return String(correctAnswer);
 };
