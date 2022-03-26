@@ -24,7 +24,7 @@ const getMissingNumber = () => {
   const correctAnswer = result[randomIndex];
   result[randomIndex] = '..';
 
-  console.log(`Question: ${result}`);
+  console.log(`Question: ${result.join(' ')}`);
   return String(correctAnswer);
 };
 
