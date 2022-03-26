@@ -1,12 +1,13 @@
-import getRandomArbitrary from '../getRandom.js';
+import getRandomNum from '../getRandom.js';
+
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const parityCheck = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const number = getRandomArbitrary(1, 30);
+  const number = getRandomNum(1, 30);
   console.log(`Question: ${number}`);
   const isEven = (num) => num % 2 === 0;
   const userAnswer = isEven(number) ? 'yes' : 'no';
   return userAnswer;
 };
 
-export default parityCheck;
+export { parityCheck, rule };

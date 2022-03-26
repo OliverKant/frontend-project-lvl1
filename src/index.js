@@ -2,9 +2,10 @@ import readlineSync from 'readline-sync';
 
 const NUMBERS_OF_ROUNDS = 3;
 
-const startGame = (getRoundData) => {
+const startGame = (getRoundData, rule) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
+  console.log(rule);
 
   for (let i = 0; i < NUMBERS_OF_ROUNDS; i += 1) {
     const userAnswer = getRoundData();
